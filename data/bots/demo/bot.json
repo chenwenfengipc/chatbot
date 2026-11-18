@@ -1,0 +1,13 @@
+{
+  "name": "Acme Software",
+  "description": "Acme Software makes small-business invoicing and inventory tools. (Sample bot - replace with your own details.)",
+  "siteUrl": "https://acme.example",
+  "contactUrl": "/contact",
+  "contactEmail": "hello@acme.example",
+  "greeting": "Hi! I can answer questions about Acme's products and pricing. What would you like to know?",
+  "starters": ["What's the difference between the plans?", "Do you have a free plan?", "How do I book a demo?"],
+  "allowedOrigins": ["http://localhost:8787", "http://localhost:3000"],
+  "accentColor": "#2563eb",
+  "privacyUrl": "",
+  "extraRules": []
+}

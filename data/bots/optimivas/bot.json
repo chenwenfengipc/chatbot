@@ -1,0 +1,16 @@
+{
+  "name": "Optimivas",
+  "description": "Optimivas is an IT products and services company based in Singapore. It builds software products (ScriptStep, UI Recorder, Web WhatsApp Extension) and will offer Oracle Fusion Cloud integration services.",
+  "siteUrl": "https://www.optimivas.com",
+  "contactUrl": "/contact",
+  "contactEmail": "support@optimivas.com",
+  "greeting": "Hi! I can answer questions about Optimivas products and pricing. What would you like to know?",
+  "starters": ["What's the difference between the plans?", "Do you have a free product?", "How do I book a demo?"],
+  "allowedOrigins": ["https://www.optimivas.com", "https://optimivas.com", "http://localhost:3000", "http://localhost:3100"],
+  "accentColor": "#0E7C74",
+  "privacyUrl": "https://www.optimivas.com/legal/privacy-policy",
+  "extraRules": [
+    "For Web WhatsApp Extension, never promise that it is allowed by WhatsApp or safe from WhatsApp account bans; say customers must follow WhatsApp's own terms.",
+    "Implementation services are not available yet: never describe their scope, timelines or pricing, and invite interested visitors to contact us."
+  ]
+}

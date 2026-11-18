@@ -1,0 +1,24 @@
+# Run the chatbot with Docker:   docker compose up -d --build
+# Settings (AI provider, key, limits) come from a ".env" file next to this one: see .env.example.
+# After editing a bot's bot.json or knowledge.md:   docker compose restart chatbot
+
+services:
+  chatbot:
+    build: .
+    image: optimivas-chatbot:latest
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      # Behind nginx on this server, so client addresses come from X-Forwarded-For.
+      TRUST_PROXY: "true"
+    ports:
+      # This machine only: nginx is the public entry point.
+      - "127.0.0.1:8787:8787"
+    volumes:
+      - ./data/bots:/app/data/bots:ro
+      # Saved conversations. The container runs as uid 1000 ("node"), so on the server run once:
+      #   mkdir -p data/transcripts && sudo chown 1000:1000 data/transcripts
+      - ./data/transcripts:/app/data/transcripts
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
